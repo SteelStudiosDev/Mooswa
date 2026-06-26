@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mooswa | Compras</title>
+        <link rel="stylesheet" href="sources/styles/styles.css">
+        <link rel="icon" type="image/png" href="sources/images/favicon.png">
+        <script type="module">
+            import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/+esm';
+            window.emailjs = emailjs;
+            emailjs.init("PQMcpg_IlfZb_5Qi2");
+        </script>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="sources/images/logo.png" alt="Mooswa logo">
+            <div>
+                <nav id="links">
+                    <a href="index.html">Página principal</a>
+                    <a href="info.html">¿Quiénes somos?</a>
+                    <a href="purchases.html">Compras</a>
+                    <a href="orders.html">Encargos</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <article>
+                <h1>Compras</h1>
+                <h2>¡Realiza tu compra aquí!</h2>
+                <div id="form">
+                    <div id="personal-information">
+                        <h3>Datos personales</h3>
+                        <div>
+                            <input id="name" type="text" name="name" placeholder="Nombre completo">
+                        </div>
+                        <div>
+                            <input id="email" type="email" name="email" placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <form id="product-details">
+                        <h3>Detalles del producto</h3>
+                        <div>
+                            Talle:
+                            <select id="size">
+                                <option value="">Selecciona el talle</option>
+                                <option value="Libreta pequeña">Libreta pequeña</option>
+                                <option value="Libreta mediana">Libreta mediana</option>
+                                <option value="Libreta grande">Libreta grande</option>
+                                <option value="Cuaderno pequeño">Cuaderno pequeño</option>
+                                <option value="Cuaderno grande">Cuaderno grande</option>
+                                <option value="Cuadernola">Cuadernola</option>
+                            </select>
+                        </div>
+                        <div>
+                            Tapa:
+                            <select id="cover">
+                                <option value="">Selecciona el tipo de tapa</option>
+                                <option value="Plástico">Plástico</option>
+                                <option value="Cartón">Cartón</option>
+                                <option value="Cartulina">Cartulina</option>
+                                <option value="Cuero">Cuero</option>
+                            </select>
+                        </div>
+                        <div>
+                            Cantidad de hojas:
+                            <input id="page-ammount"type="number" name="page-ammount" min="16" max="80" value="64" placeholder="64">
+                        </div>
+                        <div>
+                            Espiral:
+                            <select id="spiral">
+                                <option value="Sí">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            Formato:
+                            <select id="format">
+                                <option value="">Seleccione el formato</option>
+                                <option value="Rayado">Rayado</option>
+                                <option value="Liso">Liso</option>
+                                <option value="Cuadriculado">Cuadriculado</option>
+                                <option value="Pentagramado">Pentagramado</option>
+                            </select>
+                        </div>
+                        <div>
+                            Orientación:
+                            <select id="orientation">
+                                <option value="">Seleccione la orientación</option>
+                                <option value="Vertical">Vertical</option>
+                                <option value="Horizontal">Horizontal</option>
+                            </select>
+                        </div>
+                        <div>
+                            Cantidad:
+                            <input id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1">
+                        </div>
+                    </div>
+                </div>
+                <div id="send-request-container">
+                    <input id="send-request" type="button" value="Enviar pedido por correo electrónico →" onclick="sendOrderEmail()">
+                </div>
+            </article>
+        </main>
+        <footer>
+            <p id="copyright">© 2026 Mooswa. Todos los derechos reservados.</p>
+            <nav id="contact-links">
+                <a href="mailto:steelhnos@gmail.com" target="_blank">
+                    <img src="sources/images/email_icon.png" alt="Correo electrónico">
+                    Correo electrónico
+                </a>
+                <a href="https://excelenciamooswa.blogspot.com" target="_blank">
+                    <img src="sources/images/blogger_icon.png" alt="Blog">
+                    Blog
+                </a>
+                <a href="https://instagram.com/mooswa_uy" target="_blank">
+                    <img src="sources/images/instagram_icon.png" alt="Instagram">
+                    Instagram
+                </a>
+            </nav>
+        </footer>
+        <script src="sources/scripts/script.js"></script>
+    </body>
+</html>
